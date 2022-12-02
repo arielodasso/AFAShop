@@ -1,0 +1,151 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#"><img src="assets/img/afa.png">AFA Shop<span>.com</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white active" aria-current="page" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['/camisetas']">Camisetas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['/indumentarias']">Indumentaria</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['/tickets']">Entradas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" [routerLink]="['/about']">Nosotros</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <router-outlet></router-outlet>
+
+<footer
+  class="text-center text-lg-start text-white"
+  style="background-color: rgb(4,56,118);"
+  >
+<!-- Section: Social media -->
+<section
+     class="d-flex justify-content-between p-4"
+     style="background-color: rgb(127, 106, 53);"
+     >
+<!-- Left -->
+<div class="me-5">
+<span>Mantenete conectado con nuestras redes sociales:</span>
+</div>
+<!-- Left -->
+
+<!-- Right -->
+<div>
+<a href="" class="text-white me-4">
+  <i class="fab fa-facebook-f"></i>
+</a>
+<a href="" class="text-white me-4">
+  <i class="fab fa-twitter"></i>
+</a>
+<a href="" class="text-white me-4">
+  <i class="fab fa-google"></i>
+</a>
+<a href="" class="text-white me-4">
+  <i class="fab fa-instagram"></i>
+</a>
+<a href="" class="text-white me-4">
+  <i class="fab fa-linkedin"></i>
+</a>
+<a href="" class="text-white me-4">
+  <i class="fab fa-github"></i>
+</a>
+</div>
+<!-- Right -->
+</section>
+<!-- Section: Social media -->
+
+<!-- Section: Links  -->
+<section class="">
+<div class="container text-center text-md-start mt-5">
+<!-- Grid row -->
+<div class="row mt-3">
+  <!-- Grid column -->
+  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+    <!-- Content -->
+    <h6 class="text-uppercase fw-bold">AFA Shop</h6>
+    <hr
+        class="mb-4 mt-0 d-inline-block mx-auto"
+        style="width: 60px; background-color: #7c4dff; height: 2px"
+        />
+    <p>
+      AFA Shop es la tienda de indumentaria oficial de la Selección Argentina de Fútbol.
+    </p>
+  </div>
+  <!-- Grid column -->
+
+  <!-- Grid column -->
+  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+    <!-- Links -->
+    <h6 class="text-uppercase fw-bold">Productos</h6>
+    <hr
+        class="mb-4 mt-0 d-inline-block mx-auto"
+        style="width: 60px; background-color: #7c4dff; height: 2px"
+        />
+    <p>
+      <a [routerLink]="['/camisetas']" class="text-white">Camisetas</a>
+    </p>
+    <p>
+      <a [routerLink]="['/indumentarias']" class="text-white">Indumentaria</a>
+    </p>
+  </div>
+  <!-- Grid column -->
+
+  <!-- Grid column -->
+  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+    <!-- Links -->
+    <h6 class="text-uppercase fw-bold">Otras secciones</h6>
+    <hr
+        class="mb-4 mt-0 d-inline-block mx-auto"
+        style="width: 60px; background-color: #7c4dff; height: 2px"
+        />
+    <p>
+      <a [routerLink]="['/about']" class="text-white">Nosotros</a>
+    </p>
+  </div>
+  <!-- Grid column -->
+
+  <!-- Grid column -->
+  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+    <!-- Links -->
+    <h6 class="text-uppercase fw-bold">Contact</h6>
+    <hr
+        class="mb-4 mt-0 d-inline-block mx-auto"
+        style="width: 60px; background-color: #7c4dff; height: 2px"
+        />
+    <p><i class="fas fa-home mr-3"></i> Tandil, BSAS, ARG</p>
+    <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+  </div>
+  <!-- Grid column -->
+</div>
+<!-- Grid row -->
+</div>
+</section>
+<!-- Section: Links  -->
+
+<!-- Copyright -->
+<div
+ class="text-center p-3"
+ style="background-color: rgba(0, 0, 0, 0.2)"
+ >
+© 2022 Copyright:
+<a [routerLink]="['/home']" class="text-white"
+ >AfaShop.com</a
+>
+</div>
+<!-- Copyright -->
+</footer>

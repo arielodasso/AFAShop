@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="titulo">
+        <h2>Nuestras <span>Indumentarias</span></h2>
+        <p>Armá tu kit de hincha</p>
+    </div>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th class="centrado">Temporada</th>
+                <th class="centrado">Stock</th>
+                <th class="centrado"></th>
+                <th class="centrado">Agregar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let indumentaria of indumentarias">
+                <td class="producto-nombre">{{indumentaria.producto}}</td>
+                <td class="centrado temporada">{{indumentaria.temporada}}</td>
+                <td class="centrado">
+                    <span class="badge text-bg-warning"
+                    *ngIf="indumentaria.stock==0">SIN STOCK
+                    </span>
+                    <span class="badge text-bg-success"
+                    *ngIf="indumentaria.stock>0">HAY STOCK
+                    </span>
+                </td>
+                <td class="centrado"><img src="{{indumentaria.imagen}}"></td>
+                <td class="centrado"><button class="btn btn-success btn-sm" *ngIf="indumentaria.stock>0" (click)="agregarCarrito(indumentaria)">+</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<app-carrito-indumentaria></app-carrito-indumentaria>

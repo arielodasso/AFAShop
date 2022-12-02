@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="titulo">
+        <h2>Nuestras <span>Camisetas</span></h2>
+        <p>Armá tu kit de hincha</p>
+        <p class="aclaracion">(En esta sección 1 producto por kit)</p>
+    </div>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th class="centrado">Temporada</th>
+                <th class="centrado">Stock</th>
+                <th class="centrado"></th>
+                <th class="centrado">Agregar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let camiseta of camisetas">
+                <td class="producto-nombre">{{camiseta.producto}}</td>
+                <td class="centrado temporada">{{camiseta.temporada}}</td>
+                <td class="centrado">
+                    <span class="badge text-bg-warning"
+                    *ngIf="camiseta.stock==0">SIN STOCK
+                    </span>
+                    <span class="badge text-bg-success"
+                    *ngIf="camiseta.stock>0">HAY STOCK
+                    </span>
+                </td>
+                <td class="centrado"><img src="{{camiseta.imagen}}"></td>
+                <td class="centrado"><button class="btn btn-success btn-sm" *ngIf="camiseta.stock>0" (click)="agregarCarrito(camiseta)">+</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-carrito></app-carrito>
